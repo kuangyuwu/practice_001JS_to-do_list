@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient(180deg, #ffffb5, #c5ff58);
+    min-height: 100vh;
+    font-family: "Clicker Script", cursive;
+    font-weight: 400;
+}
+
+.container {
+    background-color: white;
+    width: 400px;
+    margin: 100px auto;
+    padding: 10px 100px;
+    border-radius: 30px;
+}
+
+.todo-list-title {
+    position: relative;
+    left: -20px;
+    font-size: 40px;
+}
+
+.inner-wrapper {
+    margin: 0 auto;
+    max-width: 350px;
+    width: 100%;
+}
+
+.input-wrapper {
+    border-radius: 20px;
+    background: rgb(217, 255, 193);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 424px;
+}
+
+.input-wrapper input {
+    background-color: transparent;
+    border: 0px;
+    flex: 1;
+    outline: none;
+    padding: 10px 20px;
+}
+
+.input-wrapper button {
+    background-color: rgb(110, 198, 33);
+    border: 0px;
+    color: white;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 9px 13px;
+    border-radius: 20px;
+}
+
+.input-wrapper button:hover {
+    background-color: rgb(94, 163, 32);
+    cursor: pointer;
+}
+
+.list {
+    list-style: none;
+    padding: 0px;
+    font-family: "Indie Flower", cursive;
+    font-size: 20px;
+}
+
+.list li {
+    vertical-align: middle;
+    padding: 5px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.list li.checked {
+    text-decoration: line-through;
+}
+
+.list li:hover {
+    background-color: #f4ffdf;
+    cursor: pointer;
+}
+
+.list li::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('assets/icon_unchecked.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 1px;
+}
+
+.list li.checked::before {
+    background-image: url('assets/icon_checked.svg');
+}
+
+.delete {
+    background-image: url('assets/icon_cross.svg');
+    border-radius: 20px;
+    padding: 5px;
+    background-position: center;
+    object-fit: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.delete:hover {
+    background-color: rgb(255, 225, 225);
+}
